@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <script type="module" crossorigin src="/assets/index-DZVfx-Za.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-U0vC2ZPY.css">
+  </head>
+  <body>
+    <div id="app">
+      <div class="canva-place"></div>
+      <div class="aside-place">
+        <div class="navigation">
+          <button class="nav-btn" id="previous">Wróć</button>
+          <p class="price">0$</p>
+          <button class="nav-btn active" id="next">Następne</button>
+        </div>
+
+        <section class="config-side table-shape">
+          <p class="aside-title">1. Kształt blatu</p>
+          <div class="shape-images" id="shapeButtonsContainer"></div>
+        </section>
+
+        <section class="config-side table-material">
+          <p class="aside-title">2. Materiał blatu</p>
+          <section class="material-config">
+            <div class="materials-types">
+              <p class="material-title">
+                Materiał <span id="material-place"></span>
+              </p>
+              <div class="materials-list">
+                <div class="material-preview" data-material="dab">
+                  <img src="/assets/materials/dab.jpg" alt="dąb" />
+                  <label>Dąb</label>
+                </div>
+                <div class="material-preview" data-material="buk">
+                  <img src="/assets/materials/buk.jpg" alt="buk" />
+                  <label>Buk</label>
+                </div>
+                <div class="material-preview" data-material="klon">
+                  <img src="/assets/materials/klon.jpg" alt="klon" />
+                  <label>Klon</label>
+                </div>
+                <div class="material-preview" data-material="orzech">
+                  <img src="/assets/materials/orzech.jpg" alt="orzech" />
+                  <label>Orzech</label>
+                </div>
+              </div>
+            </div>
+            <div class="materials-colors">
+              <p class="material-title">
+                Kolor <span id="material-color"></span>
+              </p>
+              <section class="colors-box">
+                <div class="color-preview" data-color="#555">
+                  <div class="color czarny"></div>
+                  <label>Czarny</label>
+                </div>
+                <div class="color-preview" data-color="#6E4030">
+                  <div class="color brazowy"></div>
+                  <label>Brązowy</label>
+                </div>
+                <div class="color-preview" data-color="#BD9460">
+                  <div class="color orzechowy"></div>
+                  <label>Orzechowy</label>
+                </div>
+                <div class="color-preview" data-color="#5C1B01">
+                  <div class="color kawowy"></div>
+                  <label>Kawowy</label>
+                </div>
+              </section>
+            </div>
+          </section>
+        </section>
+
+        <section class="config-side table-dimm">
+          <p class="aside-title">3. Wymiary</p>
+          <section class="dimmensions-side">
+            <div data-group="length">
+              <label class="length-table">Długość</label>
+              <input
+                type="number"
+                class="length-table-input"
+                name="length"
+                max="400"
+                min="100"
+                step="1"
+              />
+            </div>
+
+            <div data-group="width">
+              <label class="width-table">Szerokość</label>
+              <input
+                type="number"
+                class="width-table-input"
+                name="width"
+                max="150"
+                min="70"
+                step="1"
+              />
+            </div>
+            <div data-group="thick">
+              <label class="thick-table">Grubość</label>
+              <input
+                type="number"
+                class="thick-table-input"
+                name="thick"
+                max="5"
+                min="2"
+                step="0.1"
+              />
+            </div>
+            <div data-group="height">
+              <label class="height-table">Wysokość stołu</label>
+              <input
+                type="number"
+                class="height-table-input"
+                name="height"
+                max="100"
+                min="60"
+                step="1"
+              />
+            </div>
+          </section>
+        </section>
+
+        <section class="config-side table-bevel">
+          <p class="aside-title">4. Wykończenie</p>
+          <section class="bevel-config">
+            <p class="material-title">Wykończenie krawędzi</p>
+            <div class="bevels-container">
+              <div id="natural" class="bevel-item" data-bevel="natural">
+                <img
+                  src="./src/assets/images/bevels/rectangle.svg"
+                  alt="natural"
+                />
+              </div>
+              <div id="rounded" class="bevel-item" data-bevel="rounded">
+                <img
+                  src="./src/assets/images/bevels/rounded.svg"
+                  alt="rounded"
+                />
+              </div>
+              <div
+                id="stubby_bottom"
+                class="bevel-item"
+                data-bevel="stubby_bottom"
+              >
+                <img
+                  src="./src/assets/images/bevels/stubby_bottom.svg"
+                  alt="stubby_bottom"
+                />
+              </div>
+              <div id="stubby_top" class="bevel-item" data-bevel="stubby_top">
+                <img
+                  src="./src/assets/images/bevels/stubby_top.svg"
+                  alt="stubby_top"
+                />
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <section class="config-side table-legs">
+          <p class="aside-title">5. Rodzaj nogi stołu</p>
+          <section class="legs-container">
+            <p class="material-title">Tworzywo</p>
+            <div class="material-container">
+              <p id="legs-steel" class="material-type">Stal</p>
+              <p id="legs-wood" class="material-type">Drewno</p>
+              <p id="legs-stone" class="material-type">Kamienne</p>
+            </div>
+            <p class="material-title">Model nóg</p>
+            <div class="legs-models">
+              <div class="leg-box">
+                <img src="./src/assets/images/legs/4_legs.svg" alt="4 legs" />
+              </div>
+              <div class="leg-box">
+                <img src="./src/assets/images/legs/frame.svg" alt="frame" />
+              </div>
+            </div>
+            <div class="legs-color"></div>
+          </section>
+        </section>
+        <section class="config-side table-chairs">
+          <p class="aside-title">6. Krzesła</p>
+        </section>
+        <section class="config-side table-over">
+          <p class="aside-title">7. Przegląd</p>
+        </section>
+      </div>
+      <div class="canva-controls"></div>
+    </div>
+  </body>
+</html>
