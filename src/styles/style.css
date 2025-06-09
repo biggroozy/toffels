@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+#app {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "canva aside";
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+.canva-place {
+  flex: 1;
+  position: relative;
+  height: 100vh; /* lub tyle, ile chcesz */
+  background-color: greenyellow; /* dla testów */
+}
+
+.aside-place {
+  grid-area: aside;
+  padding: 30px;
+  border-left-style: double;
+}
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #aaa;
+}
+.navigation button.active {
+  background-color: orange;
+  color: black;
+  cursor: pointer;
+}
+.navigation button.active:hover {
+  background-color: rgb(255, 208, 120);
+}
+.navigation button {
+  border: none;
+  background-color: gray;
+  color: #aaa;
+  padding: 8px 13px;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
+.aside-title {
+  margin-top: 20px;
+  font-size: 120%;
+  text-transform: uppercase;
+  color: #777;
+}
+.config-side {
+  width: 100%;
+  height: 100%;
+}
+.shape-images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px 0;
+}
+.shape-image-box {
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.shape-image-box:hover,
+.shape-image-box.active {
+  box-shadow: 0px 2px 12px -2px;
+  background-color: orange;
+}
+.shape-image-box img {
+  width: 70px;
+  height: 70px;
+}
+.shape-image-box.active {
+  background-color: orange;
+  /* cursor: none; */
+}
+
+/* MATERIAŁY I KOLORY */
+.materials-list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 15px;
+  justify-content: space-between;
+}
+.material-title {
+  margin: 20px 0;
+  color: #777;
+}
+.material-preview {
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  text-align: center;
+  color: #777;
+  font-size: 85%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.material-preview:hover,
+.material-preview.active {
+  box-shadow: 2px 0 4px 1px #333;
+}
+.material-preview img {
+  height: 100%;
+  width: 100%;
+}
+.colors-box {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 15px;
+}
+.color-preview {
+  text-align: center;
+  color: #777;
+  font-size: 85%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  flex-grow: 1;
+}
+.color-preview:hover,
+.color-preview.active {
+  box-shadow: 2px 0 4px 1px #333;
+}
+.color {
+  cursor: pointer;
+  height: 100px;
+  width: 100%;
+}
+.colors-box .color.czarny {
+  background-color: #000;
+}
+.colors-box .color.brazowy {
+  background-color: #6e4030;
+}
+.colors-box .color.orzechowy {
+  background-color: #bd9460;
+}
+.colors-box .color.kawowy {
+  background-color: #2c1b01;
+}
+/* WYMIARY */
+.dimmensions-side {
+  display: flex;
+  flex-direction: column;
+}
+.dimmensions-side div {
+  display: flex;
+  flex-direction: column;
+}
+.dimmensions-side label {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  color: #777;
+}
+.dimmensions-side input {
+  padding: 5px;
+  border-radius: 6px;
+}
+
+/* WYKOŃCZENIE */
+.bevels-container {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+}
+.bevel-item {
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  transition: 0.3s ease-in-out;
+}
+.bevel-item img {
+  height: 60%;
+}
+.bevel-item:hover,
+.bevel-item.active {
+  background-color: orange;
+}
+/* NOGI */
+
+.material-container {
+  display: flex;
+  justify-content: space-around;
+}
+.material-type {
+  padding: 10px 15px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out all;
+}
+.material-type:hover,
+.material-type.active {
+  background-color: orange;
+}
+
+.leg-box {
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  transition: 0.3s ease-in-out;
+}
+.leg-box:hover,
+.leg-box.active {
+  background-color: orange;
+}
+.legs-models {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
