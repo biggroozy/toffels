@@ -36,7 +36,7 @@ export default class Table {
       if (this.materialName) {
         const textureLoader = new THREE.TextureLoader();
         const texture = textureLoader.load(
-          `/assets/materials/${this.materialName}.jpg`
+          `./assets/materials/${this.materialName}.jpg`
         );
         texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
         const scaleFactor = 0.0001;
